@@ -1,0 +1,41 @@
+{% extends 'AcmeCoreBundle::layout.html.twig' %}
+
+{% block content %}
+<div id="map-canvas" style="width: 100%; height: 300px; margin-bottom: 20px;"></div>
+<address style="line-height: 2;">
+    <strong>{{ site.translation.brand }}</strong>
+    <br>
+    5803, rue Sherbrooke Est, suite 201
+    <br>
+    Montréal (Québec) H1N 1B3
+    <br>
+    <abbr title="Téléphone">T:</abbr> (514) 826-5695
+    <br>
+    <a href="mailto:hello@pirecompagnie.com">hello@pirecompagnie.com</a>
+</address>
+{% endblock %}
+
+{% block js %}
+{{ parent() }}
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<script>
+var map;
+function initialize() {
+    var myLatlng = new google.maps.LatLng(45.574917, -73.548354);
+    var mapOptions = {
+        zoom: 16,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: '{{ site.translation.brand }}'
+    });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+{% endblock %}

@@ -1,0 +1,3 @@
+acme_core_contact_contact:
+    pattern:  /{_locale}/contact
+    defaults: { _controller: AcmeCoreBundle:Contact:contact }

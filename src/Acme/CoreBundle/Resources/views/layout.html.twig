@@ -1,0 +1,100 @@
+{% extends 'MsiCmsBundle:Page:layout.html.twig' %}
+
+{% block css %}
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ asset('bundles/msiadmin/css/base.css') }}">
+<style type="text/css">
+    body {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 0;
+    }
+
+    h2 {
+        margin-bottom: 0;
+        line-height: 34px;
+    }
+
+    .breadcrumb {
+        background: none;
+        padding: 0;
+    }
+</style>
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+                <span class="icon-large icon-reorder"></span>
+            </button>
+            <a class="navbar-btn btn btn-default" href="{{ path('homepage') }}">{{ site.translation.brand }}</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+        {{ knp_menu_render('AcmeCoreBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 3, 'currentClass': 'active'}) }}
+        <p class="navbar-text navbar-right" style="margin-right: -15px;"><a href="{{ path('homepage', {_locale: app.request.locale == 'fr' ? 'en' : 'fr'}) }}">{{ app.request.locale == 'fr' ? 'english' : 'français' }}</a></p>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            {% if page.showTitle %}
+                <h2 class="text-muted">{{ page.translation.title }}</h2>
+            {% endif %}
+        </div>
+        <div class="col-md-4">
+            <form class="form-inline" method="GET" action="{{ path('msi_search_search_search') }}">
+                <div class="input-group" style="margin-bottom: 0;">
+                    <input name="q" type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><span class="icon-search icon-large"></span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr>
+    {#<div class="col-md-3">
+        <div class="well">
+            {{ knp_menu_render('AcmeCoreBundle:MenuBuilder:sidebarMenu', {'allow_safe_labels': true, 'depth': 3, 'currentClass': 'active'}) }}
+        </div>
+    </div>#}
+    <div class="row">
+        <div class="col-md-8">
+            {{ msi_block_render('content_top', page) }}
+            {{ block('content') }}
+            {{ msi_block_render('content_bottom', page) }}
+        </div>
+        <div class="col-md-4">
+            {{ block('sidebar') }}
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <p><small class="muted">&copy; {{ 'now'|date('Y') }} {{ site.translation.brand }}</small></p>
+        </div>
+        <div class="col-md-6">
+            {{ msi_block_render('footer', page) }}
+        </div>
+    </div>
+</div>
+{% endblock body %}
+
+{% block js %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+{{ parent() }}
+{% endblock %}
