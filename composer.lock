@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "a060179531adfd7729697e0494a9acf1",
+    "hash": "225e1994f5a4e0f203762169cd4e22b9",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -43,7 +43,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/",
                     "role": "Creator"
@@ -62,7 +62,7 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
-                    "name": "Johannes Schmitt",
+                    "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
                     "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
@@ -118,7 +118,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/",
                     "role": "Creator"
@@ -713,7 +713,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/",
                     "role": "Creator"
@@ -815,12 +815,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "6120bd01592a8d7d5dc48b51b7087cbc3e701e09"
+                "reference": "352a5a87a78be9691ef53353b81866ac0151637c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/6120bd01592a8d7d5dc48b51b7087cbc3e701e09",
-                "reference": "6120bd01592a8d7d5dc48b51b7087cbc3e701e09",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/352a5a87a78be9691ef53353b81866ac0151637c",
+                "reference": "352a5a87a78be9691ef53353b81866ac0151637c",
                 "shasum": ""
             },
             "require": {
@@ -887,7 +887,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2014-05-04 14:19:39"
+            "time": "2014-05-09 19:18:50"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1570,12 +1570,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gnal/KekAdminBundle.git",
-                "reference": "448bd0e6c8baab4e108e1555b83de6f28aec6cc9"
+                "reference": "c8c6fa1c193a18c48ecf9f19c15ba32cdffff995"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gnal/KekAdminBundle/zipball/448bd0e6c8baab4e108e1555b83de6f28aec6cc9",
-                "reference": "448bd0e6c8baab4e108e1555b83de6f28aec6cc9",
+                "url": "https://api.github.com/repos/gnal/KekAdminBundle/zipball/c8c6fa1c193a18c48ecf9f19c15ba32cdffff995",
+                "reference": "c8c6fa1c193a18c48ecf9f19c15ba32cdffff995",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -1597,7 +1597,7 @@
                 "source": "https://github.com/gnal/KekAdminBundle/tree/master",
                 "issues": "https://github.com/gnal/KekAdminBundle/issues"
             },
-            "time": "2014-04-17 16:06:32"
+            "time": "2014-05-12 13:51:17"
         },
         {
             "name": "msi/cms-bundle",
@@ -1606,12 +1606,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gnal/KekCmsBundle.git",
-                "reference": "ab43079227ea8946c95b764eda285b0e88ebf809"
+                "reference": "4b17e7b22d9f15d21d900e9c395cfd9f9029fc4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gnal/KekCmsBundle/zipball/ab43079227ea8946c95b764eda285b0e88ebf809",
-                "reference": "ab43079227ea8946c95b764eda285b0e88ebf809",
+                "url": "https://api.github.com/repos/gnal/KekCmsBundle/zipball/4b17e7b22d9f15d21d900e9c395cfd9f9029fc4a",
+                "reference": "4b17e7b22d9f15d21d900e9c395cfd9f9029fc4a",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -1633,7 +1633,7 @@
                 "source": "https://github.com/gnal/KekCmsBundle/tree/master",
                 "issues": "https://github.com/gnal/KekCmsBundle/issues"
             },
-            "time": "2014-04-17 16:11:58"
+            "time": "2014-05-13 16:59:53"
         },
         {
             "name": "msi/search-bundle",
@@ -2068,21 +2068,20 @@
         },
         {
             "name": "symfony/icu",
-            "version": "v1.2.1",
+            "version": "v1.0.1",
             "target-dir": "Symfony/Component/Icu",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Icu.git",
-                "reference": "98e197da54df1f966dd5e8a4992135703569c987"
+                "reference": "fdba214b1e087c149843bde976263c53ac10c975"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Icu/zipball/98e197da54df1f966dd5e8a4992135703569c987",
-                "reference": "98e197da54df1f966dd5e8a4992135703569c987",
+                "url": "https://api.github.com/repos/symfony/Icu/zipball/fdba214b1e087c149843bde976263c53ac10c975",
+                "reference": "fdba214b1e087c149843bde976263c53ac10c975",
                 "shasum": ""
             },
             "require": {
-                "lib-icu": ">=4.4",
                 "php": ">=5.3.3",
                 "symfony/intl": "~2.3"
             },
@@ -2112,7 +2111,7 @@
                 "icu",
                 "intl"
             ],
-            "time": "2013-10-04 10:06:38"
+            "time": "2013-10-04 09:12:07"
         },
         {
             "name": "symfony/monolog-bundle",

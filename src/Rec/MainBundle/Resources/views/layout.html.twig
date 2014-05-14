@@ -1,5 +1,49 @@
 {% extends 'MsiCmsBundle::layout.html.twig' %}
 
 {% block body %}
-{{ block('content') }}
+<div class="container">
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <a id=logo href="{{ path('homepage') }}"><img src="{{ asset('bundles/recmain/images/logo.png') }}" alt="0"></a>
+            {{ render(url('rec_main_home_nav')) }}
+            <div class="nav-bottom text-center">
+                <a href="{{ path('msi_cms_page_show', {'slug': 'profil'}) }}"><img class="img-not-responsive" style="width: 50px;" src="{{ asset('bundles/recmain/images/profil.png') }}" alt="0"></a>
+                <a href="{{ path('msi_cms_page_show', {'slug': 'coordonnees'}) }}"><img class="img-not-responsive" style="width: 50px;" src="{{ asset('bundles/recmain/images/coordonnees.png') }}" alt="0"></a>
+                <a href="{{ path('msi_cms_page_show', {'slug': 'expos'}) }}"><img class="img-not-responsive" style="width: 50px;" src="{{ asset('bundles/recmain/images/expos.png') }}" alt="0"></a>
+            </div>
+            <br>
+            <div class="cp">rose élise cialdella</div>
+        </div>
+        <div id="content-wrapper">
+            <a id="nav-toggle" href="#" class="btn btn-default"><i class="fa fa-bars"></i></a>
+            {% if page.showTitle %}
+                <h1>{{ page.translation.title }}</h1>
+            {% endif %}
+            {{ block('content') }}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block css %}
+{{ parent() }}
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('bundles/recmain/css/main.css') }}">
+{% endblock %}
+
+{% block js %}
+{{ parent() }}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script>
+(function($) {
+    "use strict";
+    $("#nav-toggle").on('click', function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+    });
+})(jQuery);
+</script>
 {% endblock %}

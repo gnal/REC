@@ -15,4 +15,24 @@ class HomeController extends Controller
     {
         return [];
     }
+
+    /**
+     * @Route("/nav/main")
+     * @Template()
+     */
+    public function navAction()
+    {
+        $categories = $this->getDoctrine()->getRepository('RecMainBundle:ArtworkCategory')->findBy(
+            [
+                'lvl' => 0,
+            ],
+            [
+                'position' => 'ASC',
+            ]
+        );
+
+        return [
+            'categories' => $categories,
+        ];
+    }
 }

@@ -8,10 +8,8 @@ msi_search:
     prefix:   /{_locale}
 
 homepage:
-    pattern:  /{_locale}/
+    pattern:  /
     defaults: { _controller: RecMainBundle:Home:index }
-    requirements:
-        _locale: fr|en
 
 # fos_user
 
@@ -49,3 +47,7 @@ msi_admin:
 msi_cms:
     resource: "@MsiCmsBundle/Controller"
     type: annotation
+
+msi_cms_page_show:
+    pattern: /{slug}
+    defaults: { _controller: MsiCmsBundle:Page:show, slug: ~ }

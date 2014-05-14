@@ -8,10 +8,9 @@
         </div>
         <div class="col-xs-8">
             <ul class="slider">
-                <li><img style="margin: auto;" src="http://placekitten.com/g/400/600" alt="0"></li>
-                <li><img style="margin: auto;" src="http://placekitten.com/300/600" alt="0"></li>
-                <li><img style="margin: auto;" src="http://placekitten.com/600/400" alt="0"></li>
-                <li><img style="margin: auto;" src="http://placekitten.com/g/600/300" alt="0"></li>
+                {% for artwork in artworks %}
+                    <li><img style="margin: auto;" src="{{ artwork.pathname }}" alt="0"></li>
+                {% endfor %}
             </ul>
         </div>
         <div class="col-xs-2">
@@ -19,10 +18,9 @@
         </div>
     </div>
     <ul class="carousel">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        {% for artwork in artworks %}
+            <li></li>
+        {% endfor %}
     </ul>
 </div>
 {% endblock %}

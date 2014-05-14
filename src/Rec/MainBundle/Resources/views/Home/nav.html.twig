@@ -1,0 +1,20 @@
+<ul class="nav nav-sidebar">
+    {% for category in categories %}
+        <li>
+            <div class="row">
+                <div class="col-xs-6">
+                    <a href="{{ path('rec_main_artwork_index', {'c': category.id}) }}"><img src="{{ category.pathname }}" alt="{{ category }}"></a>
+                </div>
+                <div class="col-xs-6">
+                    {% if category.children.count %}
+                        <ul>
+                            {% for child in category.children %}
+                                <li><a href="{{ path('rec_main_artwork_index', {'c': child.id}) }}"><img src="{{ child.pathname }}" alt="{{ child }}"></a></li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </li>
+    {% endfor %}
+</ul>

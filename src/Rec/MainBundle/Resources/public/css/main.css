@@ -1,0 +1,145 @@
+html {
+    overflow-y: scroll;
+}
+
+.container {
+    max-width: 970px !important;
+    margin-left: 0;
+}
+
+#logo {
+    padding: 60px 30px;
+    display: block;
+}
+
+#sidebar-wrapper {
+    background: #111;
+}
+
+#content-wrapper {
+    padding-top: 60px;
+}
+
+#slider ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-not-responsive {
+    display: inline;
+    max-width: none;
+}
+
+.prev, .next {
+    margin: auto;
+    display: block;
+    margin-top: 250px;
+}
+
+.nav>li>a>img {
+    max-width: 100%;
+}
+
+.nav.nav-sidebar .row {
+    margin: 0;
+}
+
+.nav.nav-sidebar>li>a:hover, .nav.nav-sidebar>li>a:focus {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.nav.nav-sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav.nav-sidebar a {
+    color: #fff;
+    display: block;
+    padding: 8px 0;
+}
+
+.nav.nav-sidebar > li ul > li > a {
+    color: #fff;
+    display: block;
+    padding: 0 0 0 30px;
+}
+
+.nav.nav-sidebar > li ul > li:first-child > a {
+    padding-top: 8px;
+}
+
+.cp {
+    color: #aaa;
+    font-size: 17px;
+    text-align: center;
+}
+
+.nav-bottom {
+    margin-top: 68px;
+}
+
+/* sidebar thing */
+
+#wrapper {
+  padding-left: 250px;
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper {
+  margin-left: -250px;
+  left: 250px;
+  width: 250px;
+  background: #000;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+#content-wrapper {
+  width: 100%;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+@media (max-width:767px) {
+    #wrapper {
+      padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+      left: 0;
+    }
+
+    #wrapper.active {
+      position: relative;
+      left: 250px;
+    }
+
+    #wrapper.active #sidebar-wrapper {
+      left: 250px;
+      width: 250px;
+      transition: all 0.4s ease 0s;
+    }
+
+    #nav-toggle {
+      display: inline-block;
+    }
+
+    .inset {
+      padding: 15px;
+    }
+}
