@@ -1570,12 +1570,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gnal/KekAdminBundle.git",
-                "reference": "c8c6fa1c193a18c48ecf9f19c15ba32cdffff995"
+                "reference": "bbd6f0c0a1c630db30de82451cb763d44cf1b2a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gnal/KekAdminBundle/zipball/c8c6fa1c193a18c48ecf9f19c15ba32cdffff995",
-                "reference": "c8c6fa1c193a18c48ecf9f19c15ba32cdffff995",
+                "url": "https://api.github.com/repos/gnal/KekAdminBundle/zipball/bbd6f0c0a1c630db30de82451cb763d44cf1b2a6",
+                "reference": "bbd6f0c0a1c630db30de82451cb763d44cf1b2a6",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -1597,7 +1597,7 @@
                 "source": "https://github.com/gnal/KekAdminBundle/tree/master",
                 "issues": "https://github.com/gnal/KekAdminBundle/issues"
             },
-            "time": "2014-05-12 13:51:17"
+            "time": "2014-05-14 13:40:11"
         },
         {
             "name": "msi/cms-bundle",
@@ -1606,12 +1606,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gnal/KekCmsBundle.git",
-                "reference": "4b17e7b22d9f15d21d900e9c395cfd9f9029fc4a"
+                "reference": "a13061b2d9672c56f46adf52b411ebe8407e0107"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gnal/KekCmsBundle/zipball/4b17e7b22d9f15d21d900e9c395cfd9f9029fc4a",
-                "reference": "4b17e7b22d9f15d21d900e9c395cfd9f9029fc4a",
+                "url": "https://api.github.com/repos/gnal/KekCmsBundle/zipball/a13061b2d9672c56f46adf52b411ebe8407e0107",
+                "reference": "a13061b2d9672c56f46adf52b411ebe8407e0107",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -1633,7 +1633,7 @@
                 "source": "https://github.com/gnal/KekCmsBundle/tree/master",
                 "issues": "https://github.com/gnal/KekCmsBundle/issues"
             },
-            "time": "2014-05-13 16:59:53"
+            "time": "2014-05-14 13:40:00"
         },
         {
             "name": "msi/search-bundle",
