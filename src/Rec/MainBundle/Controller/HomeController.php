@@ -22,14 +22,14 @@ class HomeController extends Controller
      */
     public function navAction()
     {
-        $categories = $this->getDoctrine()->getRepository('RecMainBundle:ArtworkCategory')->findBy(
-            [
-                'lvl' => 0,
-            ],
-            [
-                'position' => 'ASC',
-            ]
-        );
+        $qb = $this->getDoctrine()->getRepository('RecMainBundle:ArtworkCategory')->createQueryBuilder('a');
+        $qb->andWhere($qb->expr()->eq('a.lvl', ':lvl'));
+        $qb->setParameter('lvl', 0);
+        $qb->leftJoin('a.children', 'children');
+        $qb->orderBy('a.position', 'ASC');
+        $qb->addOrderBy('children.position', 'ASC');
+
+        $categories = $qb->getQuery()->execute();
 
         return [
             'categories' => $categories,

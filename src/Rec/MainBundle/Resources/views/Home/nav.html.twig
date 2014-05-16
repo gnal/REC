@@ -7,7 +7,7 @@
                 </div>
                 <div class="col-xs-6">
                     {% if category.children.count %}
-                        <ul>
+                        <ul class="pull-right">
                             {% for child in category.children %}
                                 <li><a href="{{ path('rec_main_artwork_index', {'c': child.id}) }}"><img src="{{ child.pathname }}" alt="{{ child }}"></a></li>
                             {% endfor %}

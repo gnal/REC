@@ -52,7 +52,6 @@ class ArtworkCategory
 
     /**
      * @ORM\OneToMany(targetEntity="ArtworkCategory", mappedBy="parent")
-     * @ORM\OrderBy({"lft" = "ASC"})
      */
     protected $children;
 

@@ -9,7 +9,11 @@
         <div class="col-xs-8">
             <ul class="slider">
                 {% for artwork in artworks %}
-                    <li><img style="margin: auto;" src="{{ artwork.pathname }}" alt="0"></li>
+                    <li>
+                        <img style="margin: auto;" src="{{ artwork.pathname }}" alt="0">
+                        <br>
+                        <p>Pellentesque ut massa vitae tortor consequat adipiscing. Nunc consequat rutrum urna eu rhoncus. Aliquam erat volutpat.</p>
+                    </li>
                 {% endfor %}
             </ul>
         </div>
