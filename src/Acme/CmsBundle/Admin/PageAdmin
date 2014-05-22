@@ -1,0 +1,14 @@
+<?php
+
+namespace Acme\CmsBundle\Admin;
+
+use Msi\CmsBundle\Admin\PageAdmin as BaseAdmin;
+use JMS\DiExtraBundle\Annotation as DI;
+
+/**
+ * @DI\Service("msi_cms_page_admin", parent="msi_admin.admin")
+ * @DI\Tag("msi.admin")
+ */
+class PageAdmin extends BaseAdmin
+{
+}
