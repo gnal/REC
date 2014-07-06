@@ -33,7 +33,24 @@ class Artwork
      */
     protected $image;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    protected $description;
+
     protected $imageFile;
+
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
 
     public function getUploadFields()
     {
