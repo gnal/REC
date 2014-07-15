@@ -1,12 +1,20 @@
 {% extends 'RecMainBundle::layout.html.twig' %}
 
 {% block content %}
-<div id="slider">
+<ul class="list-unstyled">
+{% for artwork in artworks %}
+    <li>
+        <img src="{{ artwork.pathname }}" alt="0">
+        {% if artwork.description %}<p>{{ artwork.description }}</p>{% endif %}
+    </li>
+{% endfor %}
+</ul>
+{#<div id="slider">
     <div class="row">
-        {#<div class="col-xs-2">
+        <div class="col-xs-2">
             <a class="control prev" data-direction="prev" href="#"><img src="{{ asset('bundles/recmain/images/a.png') }}" alt="0"></a>
-        </div>#}
-        <div class="col-xs-11 col-xs-offset-1">
+        </div>
+        <div class="col-xs-12">
             <ul class="slider">
                 {% for artwork in artworks %}
                     <li>
@@ -17,16 +25,16 @@
                 {% endfor %}
             </ul>
         </div>
-        {#<div class="col-xs-2">
+        <div class="col-xs-2">
             <a class="control next" data-direction="next" href="#"><img src="{{ asset('bundles/recmain/images/z.png') }}" alt="0"></a>
-        </div>#}
+        </div>
     </div>
     <ul class="carousel">
         {% for artwork in artworks %}
             <li></li>
         {% endfor %}
     </ul>
-</div>
+</div>#}
 {% endblock %}
 
 {% block js %}
