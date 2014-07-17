@@ -2,6 +2,22 @@
     {% for category in categories %}
         <li>
             <div class="row">
+                <div class="col-xs-8">
+                    <a>
+                        <img src="{{ category.pathname }}" alt="{{ category }}">
+                    </a>
+                </div>
+            </div>
+            <ul style="margin-bottom: 12px;">
+                {% for child in category.children %}
+                    <li>
+                        <a href="{{ path('rec_main_artwork_index', {'c': child.id}) }}">
+                            {{ child.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+            {#<div class="row">
                 <div class="col-xs-6">
                     <a href="{{ path('rec_main_artwork_index', {'c': category.id}) }}"><img src="{{ category.pathname }}" alt="{{ category }}"></a>
                 </div>
@@ -14,7 +30,7 @@
                         </ul>
                     {% endif %}
                 </div>
-            </div>
+            </div>#}
         </li>
     {% endfor %}
 </ul>
