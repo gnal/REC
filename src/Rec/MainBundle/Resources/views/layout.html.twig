@@ -18,12 +18,12 @@
         <div id="content-wrapper">
             <a style="margin: 10px;" id="nav-toggle" href="#" class="btn btn-default"><i class="fa fa-bars"></i></a>
             {% if page.id and page.showTitle %}
-                <div class="row">
-                    <div class="col-xs-3">
-                        <h1><img src="{{ asset('bundles/recmain/images/'~page.id~'.png') }}" alt="{{ page.translation.title }}"></h1>
-                    </div>
-                </div>
                 <div id="page-content">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <h1><img src="{{ asset('bundles/recmain/images/'~page.id~'.png') }}" alt="{{ page.translation.title }}"></h1>
+                        </div>
+                    </div>
                     {{ block('content') }}
                 </div>
             {% else %}
