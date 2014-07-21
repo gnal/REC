@@ -41,6 +41,7 @@ class ArtworkController extends Controller
 
         return [
             'artworks' => $artworks,
+            'category' => $category,
         ];
     }
 }
