@@ -9,7 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class ArtworkController extends Controller
 {
     /**
-     * @Route("/portfolio/{c}/")
+     * @Route("/portfolio/{c}")
      * @Template()
      */
     public function indexAction()
