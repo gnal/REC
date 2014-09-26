@@ -1,7 +1,8 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
     "hash": "225e1994f5a4e0f203762169cd4e22b9",
     "packages": [
@@ -1606,12 +1607,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gnal/KekCmsBundle.git",
-                "reference": "8664b6a7e188c684ec8669f2e9b05ce5490f8a41"
+                "reference": "7d46d2a001eaad6e88aba368a2a76661321f70ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gnal/KekCmsBundle/zipball/8664b6a7e188c684ec8669f2e9b05ce5490f8a41",
-                "reference": "8664b6a7e188c684ec8669f2e9b05ce5490f8a41",
+                "url": "https://api.github.com/repos/gnal/KekCmsBundle/zipball/7d46d2a001eaad6e88aba368a2a76661321f70ab",
+                "reference": "7d46d2a001eaad6e88aba368a2a76661321f70ab",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -1633,7 +1634,7 @@
                 "source": "https://github.com/gnal/KekCmsBundle/tree/master",
                 "issues": "https://github.com/gnal/KekCmsBundle/issues"
             },
-            "time": "2014-05-16 13:39:20"
+            "time": "2014-09-26 14:14:30"
         },
         {
             "name": "msi/search-bundle",
@@ -2471,6 +2472,7 @@
         "msi/search-bundle": 20,
         "msi/user-bundle": 20
     },
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.3.3"
     },
