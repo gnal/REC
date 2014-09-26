@@ -1,0 +1,3 @@
+entity:
+    ArtworkCategory: Category|Categories
+    Artwork: Image|Images
