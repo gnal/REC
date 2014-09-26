@@ -106,3 +106,8 @@ msi_cms:
 msi_search:
     entities:
         - "AcmeCmsBundle:Page"
+
+msi_user:
+    roles:
+        ROLE_ADMIN: admin
+        ROLE_SUPER_ADMIN: super admin
