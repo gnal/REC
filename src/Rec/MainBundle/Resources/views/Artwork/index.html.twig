@@ -7,7 +7,7 @@
 {% for artwork in artworks %}
     <li>
         <img src="{{ artwork.pathname }}" alt="0">
-        {% if artwork.description %}<div style="padding: 10px;">{{ artwork.description }}</div>{% endif %}
+        {% if artwork.description %}<div style="padding: 10px;">{{ artwork.description|nl2br }}</div>{% endif %}
     </li>
 {% endfor %}
 </ul>
