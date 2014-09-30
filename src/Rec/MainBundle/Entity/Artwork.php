@@ -38,7 +38,41 @@ class Artwork
      */
     protected $description;
 
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    protected $description2;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    protected $description3;
+
     protected $imageFile;
+
+    public function getDescription2()
+    {
+        return $this->description2;
+    }
+
+    public function setDescription2($description2)
+    {
+        $this->description2 = $description2;
+
+        return $this;
+    }
+
+    public function getDescription3()
+    {
+        return $this->description3;
+    }
+
+    public function setDescription3($description3)
+    {
+        $this->description3 = $description3;
+
+        return $this;
+    }
 
     public function getDescription()
     {

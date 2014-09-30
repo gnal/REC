@@ -7,7 +7,34 @@
 {% for artwork in artworks %}
     <li>
         <img src="{{ artwork.pathname }}" alt="0">
-        {% if artwork.description %}<div style="padding: 10px;">{{ artwork.description|nl2br }}</div>{% endif %}
+        {% if artwork.description %}
+            <div style="padding: 10px;">
+                {% if artwork.description and artwork.description2 and artwork.description3 %}
+                    <div class="row" style="margin: 0 -10px;">
+                        <div class="col-md-4" style="padding: 0 10px;">
+                            {{ artwork.description|nl2br }}
+                        </div>
+                        <div class="col-md-4" style="padding: 0 10px;">
+                            {{ artwork.description|nl2br }}
+                        </div>
+                        <div class="col-md-4" style="padding: 0 10px;">
+                            {{ artwork.description|nl2br }}
+                        </div>
+                    </div>
+                {% elseif artwork.description and artwork.description2 %}
+                    <div class="row" style="margin: 0 -10px;">
+                        <div class="col-md-6" style="padding: 0 10px;">
+                            {{ artwork.description|nl2br }}
+                        </div>
+                        <div class="col-md-6" style="padding: 0 10px;">
+                            {{ artwork.description|nl2br }}
+                        </div>
+                    </div>
+                {% else %}
+                    {{ artwork.description|nl2br }}
+                {% endif %}
+            </div>
+        {% endif %}
     </li>
 {% endfor %}
 </ul>

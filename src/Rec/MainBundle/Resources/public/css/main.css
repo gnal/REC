@@ -23,6 +23,7 @@ h1 {
 #logo {
     padding: 35px;
     display: block;
+    /*background: url(/bundles/recmain/images/logo.png) no-repeat left top;*/
 }
 
 #sidebar-wrapper {

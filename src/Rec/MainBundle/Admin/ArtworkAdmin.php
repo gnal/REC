@@ -33,6 +33,8 @@ class ArtworkAdmin extends Admin
             ->add('published')
             ->add('imageFile', 'file')
             ->add('description', 'textarea')
+            ->add('description2', 'textarea')
+            ->add('description3', 'textarea')
         ;
     }
 }
