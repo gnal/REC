@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function indexAction()
     {
-        return $this->redirect($this->generateUrl('rec_main_artwork_index', ['c' => 2]));
+        return $this->redirect($this->generateUrl('rec_main_artwork_index', ['c' => 23]));
     }
 
     /**
